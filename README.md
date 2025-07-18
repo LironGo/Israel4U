@@ -44,8 +44,6 @@ A comprehensive social network platform designed to help people during emergenci
 - **Mongoose** - ODM for MongoDB
 - **Socket.IO** - Real-time communication
 - **JWT** - Authentication
-- **bcryptjs** - Password hashing
-- **nodemailer** - Email functionality
 
 ### Frontend (to be implemented)
 - **React** - Frontend framework
@@ -66,36 +64,9 @@ cd israel4u-project-new
 npm install
 ```
 
-3. Create a `.env` file in the root directory:
-```env
-# MongoDB Configuration
-MONGODB_URI=mongodb://localhost:27017/israel4u
+3. Start MongoDB service
 
-# JWT Secret
-JWT_SECRET=your-super-secret-jwt-key-here
-
-# Frontend URL
-FRONTEND_URL=http://localhost:3000
-
-# Cloudinary Configuration (for image uploads)
-CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
-CLOUDINARY_API_KEY=your-cloudinary-api-key
-CLOUDINARY_API_SECRET=your-cloudinary-api-secret
-
-# Email Configuration (for verification and password reset)
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-email-app-password
-
-# Server Port
-PORT=5000
-
-# Node Environment
-NODE_ENV=development
-```
-
-4. Start MongoDB service
-
-5. Run the development server:
+4. Run the development server:
 ```bash
 npm run dev
 ```
@@ -171,11 +142,10 @@ The server will start on `http://localhost:5000`
 ## Database Models
 
 ### User
-- Basic info (email, password, fullName, phone)
+- Basic info (email, password, full name, phone)
 - Location (region, city)
 - Categories (isEvacuee, isInjured, isReservist, isRegularSoldier)
 - Relationships (friends, groups, managedGroups)
-- Email verification and password reset
 
 ### Group
 - Basic info (name, description, city, region)
@@ -187,7 +157,7 @@ The server will start on `http://localhost:5000`
 - Content and metadata
 - Categories matching user categories
 - Post types (help_request, support_offer, general, emergency)
-- Interactions (likes, comments, saves, pins)
+- Interactions (likes, comments, saves)
 
 ### Message & Conversation
 - Real-time messaging system
@@ -217,14 +187,6 @@ The server will start on `http://localhost:5000`
 - Category-based filtering
 - Region and city filtering
 - Advanced search with multiple parameters
-
-## Statistics & Analytics
-
-- D3.js powered charts
-- Posts per month analytics
-- User and group category statistics
-- Post type and region analytics
-- Average posts per group metrics
 
 ## Project Structure
 
@@ -266,26 +228,6 @@ israel4u-project-new/
 ├── server.js
 └── README.md
 ```
-
-## Development Guidelines
-
-This project follows the StudyVerse-main patterns and uses only technologies taught by the course instructor:
-
-- Simple and minimal code structure
-- No advanced external libraries beyond course materials
-- Student-level implementation complexity
-- Clear separation of concerns (MVC pattern)
-- Comprehensive error handling and validation
-
-## Next Steps
-
-1. Implement the React frontend
-2. Add image upload functionality with Cloudinary
-3. Implement D3.js charts for statistics
-4. Add CSS3 advanced features (text-shadow, transitions, etc.)
-5. Add jQuery functionality for DOM manipulation
-6. Implement video and canvas features
-7. Add comprehensive testing
 
 ## License
 
